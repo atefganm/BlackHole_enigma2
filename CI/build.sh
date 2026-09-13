@@ -4,8 +4,8 @@
 # You're not allowed to remove my copyright or reuse this script without putting this header.
 
 setup_git() {
-  git config --global user.email "info@openbh.net"
-  git config --global user.name "openbh-bot"
+  git config --global user.email "atef_anim_1974@yahoo.com"
+  git config --global user.name "atefganm-openbh-bot"
 }
 
 commit_files() {
@@ -13,15 +13,15 @@ commit_files() {
   rm -rf *.pyc
   rm -rf *.pyo
   rm -rf *.mo
-  git checkout Python3.13
+  git checkout Python3.14
   ./CI/chmod.sh
   ./CI/dos2unix.sh
   ./CI/PEP8.sh
 }
 
 upload_files() {
-  git remote add upstream https://${GITHUB_TOKEN}@github.com/BlackHole/enigma2.git > /dev/null 2>&1
-  git push --quiet upstream Python3.13 || echo "failed to push with error $?"
+  git remote add upstream https://${GITHUB_TOKEN}@github.com/atefganm/BlackHole_enigma2.git > /dev/null 2>&1
+  git push --quiet upstream Python3.14 || echo "failed to push with error $?"
 }
 
 setup_git
